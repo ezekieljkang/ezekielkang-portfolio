@@ -176,6 +176,7 @@ export const SkeletonThree = () => {
 };
 
 export const SkeletonTwo = () => {
+
   const images = [
     "/tobyBaby.jpg",
     "/tobyBirthday.jpg",
@@ -188,38 +189,35 @@ export const SkeletonTwo = () => {
     "/latteBaby.jpg",
     "/bailey.jpg",
     "/allDogs.jpg",
-  ]
+  ];
 
-  const imageVariants = {
-    whileHover: {
-      scale: 1.5,
-      rotate: 0,
-      zIndex: 99,
-    },
-    whileTap: {
-      scale: 2.95,
-      rotate: 0,
-      zIndex: 100,
-      position: "absolute",
-      left: "50%",
-      top: "40%",
-      translateX: "-50%",
-      translateY: "-50%",
-    },
-  };
   return (
     <div className="relative flex flex-col items-start px-8 py-4 md:p-8 gap-10 h-full overflow-hidden">
-      <p className="text-[12px] leading-[1.33] tracking-[.022em] mx-auto md:ml-0'">Click And Hold To Enlarge Images.</p>
+      <p className="text-[12px] leading-[1.33] tracking-[.022em] mx-auto md:ml-0">
+        Click And Hold To Enlarge Images.
+      </p>
       <div className="flex flex-row -ml-7 md:-ml-20">
         {images.map((image, idx) => (
           <motion.div
-            variants={imageVariants}
             key={"images-first" + idx}
             style={{
               rotate: Math.random() * 15 - 10,
             }}
-            whileHover="whileHover"
-            whileTap="whileTap"
+            whileHover={{
+              scale: 1.2,
+              rotate: 0,
+              zIndex: 99,
+            }}
+            whileTap={{
+              scale: 2.95,
+              rotate: 0,
+              zIndex: 100,
+              position: "absolute",
+              left: "50%",
+              top: "40%",
+              translateX: "-50%",
+              translateY: "-50%"
+            }}
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-gray-300 dark:border-gray-300 border border-gray-300 flex-shrink-0 overflow-hidden"
           >
             <Image
@@ -237,11 +235,23 @@ export const SkeletonTwo = () => {
           <motion.div
             key={"images-second" + idx}
             style={{
-              rotate: Math.random() * 30 - 10,
+              rotate: Math.random() * 15 - 10,
             }}
-            variants={imageVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
+            whileHover={{
+              scale: 1.2,
+              rotate: 0,
+              zIndex: 99,
+            }}
+            whileTap={{
+              scale: 2.95,
+              rotate: 0,
+              zIndex: 100,
+              position: "absolute",
+              left: "50%",
+              top: "40%",
+              translateX: "-50%",
+              translateY: "-50%"
+            }}
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-gray-300 dark:border-gray-300 border border-gray-300 flex-shrink-0 overflow-hidden"
           >
             <Image
@@ -257,6 +267,7 @@ export const SkeletonTwo = () => {
     </div>
   );
 };
+
 
 export const SkeletonFour = () => {
   return (
