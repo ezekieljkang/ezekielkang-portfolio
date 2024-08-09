@@ -17,7 +17,7 @@ const MySkills = () => {
             className='border border-black bg-white rounded-full lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
           >
             <Image
-              src={icon}
+              src={`${prefix}${icon}`}
               height="1000"
               width="1000"
               alt={`Icon ${index}`}
@@ -35,7 +35,7 @@ const MySkills = () => {
             className='border border-black bg-white rounded-full lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'// Adjust spacing as needed
           >
             <Image
-              src={icon}
+              src={`${prefix}${icon}`}
               height="1000"
               width="1000"
               alt={`Icon ${index}`}

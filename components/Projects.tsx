@@ -5,6 +5,8 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import AnimatedComponent from "./AnimatedComponent";
 import { LinkPreview } from "@/components/ui/link-preview";
 
+const prefix = '/ezekielkang-portfolio';
+
 export function Projects() {
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
@@ -23,8 +25,6 @@ export function Projects() {
 }
 
 const PortfolioContent = () => {
-  const prefix = '/ezekielkang-portfolio';
-
   return (
     <>
       <div
@@ -61,7 +61,7 @@ const PortfolioContent = () => {
           target="_blank"
         >
           <Image
-            src="/portfoliotemplate.png"
+            src={`${prefix}/portfoliotemplate.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -74,8 +74,6 @@ const PortfolioContent = () => {
 };
 
 const UsedCarsProject = () => {
-  const prefix = '/ezekielkang-portfolio';
-
   return (
     <>
       <div
@@ -110,7 +108,7 @@ const UsedCarsProject = () => {
           target="_blank"
         >
           <Image
-            src="/carmostdata.png"
+            src={`${prefix}/carmostdata.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -123,8 +121,6 @@ const UsedCarsProject = () => {
 };
 
 const LibraryProject = () => {
-  const prefix = '/ezekielkang-portfolio';
-
   return (
     <>
       <div
@@ -159,7 +155,7 @@ const LibraryProject = () => {
           target="_blank"
         >
           <Image
-            src="/libraryhome.png"
+            src={`${prefix}/libraryhome.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -174,7 +170,7 @@ const LibraryProject = () => {
           Create Book Page
         </p>
         <Image
-            src="/librarycreatebook.png"
+            src={`${prefix}/librarycreatebook.png`}
             alt="giphy images with search option"
             height="1850"
             width="1000"
@@ -188,7 +184,7 @@ const LibraryProject = () => {
           Book Instance Page
         </p>
         <Image
-            src="/libraryinstance.png"
+            src={`${prefix}/libraryinstance.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -200,8 +196,6 @@ const LibraryProject = () => {
 }
 
 const GeminiProject = () => {
-  const prefix = '/ezekielkang-portfolio';
-
   return (
     <>
       <div
@@ -239,7 +233,7 @@ const GeminiProject = () => {
           target="_blank"
         >
           <Image
-            src="/geminiclone.png"
+            src={`${prefix}/geminiclone.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -286,7 +280,7 @@ const TShirtProject = () => {
           target="_blank"
         >
           <Image
-            src="/tshirtmaker.png"
+            src={`${prefix}/tshirtmaker.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -335,7 +329,7 @@ const GiphyProject = () => {
           target="_blank"
         >
           <Image
-            src="/giphypage.png"
+            src={`${prefix}/giphypage.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -381,7 +375,7 @@ const LandingPageProject = () => {
           target="_blank"
         >
           <Image
-            src="/evpage.png"
+            src={`${prefix}/evpage.png`}
             alt="giphy images with search option"
             height="1500"
             width="1000"
@@ -397,43 +391,43 @@ const data = [
   {
     category: "Personal Projects",
     title: "A simple and elegant personalized portfolio.",
-    src: "/project1.png",
+    src: "/ezekielkang-portfolio/project1.png",
     content: <PortfolioContent />,
   },
   {
     category: "Full-Stack Projects",
     title: "A used car inventory system with database integration.",
-    src: "/carmost.png",
+    src: "/ezekielkang-portfolio/carmost.png",
     content: <UsedCarsProject />,
   },
   {
     category: "Backend Projects",
     title: "A local library management system with CRUD functionality.",
-    src: "/locallibrary.png",
+    src: "/ezekielkang-portfolio/locallibrary.png",
     content: <LibraryProject />,
   },
   {
     category: "API Projects",
     title: "A clone of Google Gemini utilizing its API for dynamic features.",
-    src: "/geminithumbnail.jpg",
+    src: "/ezekielkang-portfolio/geminithumbnail.jpg",
     content: <GeminiProject />,
   },
   {
     category: "Interactive Design",
     title: "A real-time t-shirt customizer allowing users to personalize designs.",
-    src: "/tshirt.png",
+    src: "/ezekielkang-portfolio/tshirt.png",
     content: <TShirtProject />,
   },
   {
     category: "API Projects",
     title: "Dynamic GIF Search with Giphy API",
-    src: "/gipylogo.jpg",
+    src: "/ezekielkang-portfolio/gipylogo.jpg",
     content: <GiphyProject />,
   },
   {
     category: "Design Projects",
     title: "A visually appealing landing page designed for electric vehicles.",
-    src: "/evlanding.png",
+    src: "/ezekielkang-portfolio/evlanding.png",
     content: <LandingPageProject />,
   },
 ];

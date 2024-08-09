@@ -10,6 +10,8 @@ import Link from "next/link";
 import AnimatedComponent from "./AnimatedComponent";
 import { AboutMeCardStack } from "./AboutMeCardStack";
 
+const prefix = '/ezekielkang-portfolio';
+
 export function AboutMe() {
   const features = [
     {
@@ -123,7 +125,7 @@ export const SkeletonThree = () => {
             className="flex justify-center items-center"
           >
             <Image
-              src="/riotgames.svg"
+              src={`${prefix}/riotgames.svg`}
               alt="riot games logo"
               width={150}
               height={150}
@@ -136,7 +138,7 @@ export const SkeletonThree = () => {
             className="flex justify-center items-center"
           >
             <Image
-              src="/nintendo.svg"
+              src={`${prefix}/nintendo.svg`}
               alt="nintendo logo"
               width={150}
               height={150}
@@ -149,7 +151,7 @@ export const SkeletonThree = () => {
             className="flex justify-center items-center"
           >
             <Image
-              src="/spotify.svg"
+              src={`${prefix}/spotify.svg`}
               alt="spotify logo"
               width={150}
               height={150}
@@ -162,7 +164,7 @@ export const SkeletonThree = () => {
             className="flex justify-center items-center"
           >
             <Image
-              src="/discord.svg"
+              src={`${prefix}/discord.svg`}
               alt="discord logo"
               width={150}
               height={150}
@@ -178,17 +180,17 @@ export const SkeletonThree = () => {
 export const SkeletonTwo = () => {
 
   const images = [
-    "/tobyBaby.jpg",
-    "/tobyBirthday.jpg",
-    "/tobySleep.jpg",
-    "/latteBaby2.jpg",
+    `${prefix}/tobyBaby.jpg`,
+    `${prefix}/tobyBirthday.jpg`,
+    `${prefix}/tobySleep.jpg`,
+    `${prefix}/latteBaby2.jpg`,
   ];
 
   const images2 = [
-    "/latteBaby3.jpg",
-    "/latteBaby.jpg",
-    "/bailey.jpg",
-    "/allDogs.jpg",
+    `${prefix}/latteBaby3.jpg`,
+    `${prefix}/latteBaby.jpg`,
+    `${prefix}/bailey.jpg`,
+    `${prefix}/allDogs.jpg`,
   ];
 
   return (
@@ -221,7 +223,7 @@ export const SkeletonTwo = () => {
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-gray-300 dark:border-gray-300 border border-gray-300 flex-shrink-0 overflow-hidden"
           >
             <Image
-              src={image}
+              src={`${prefix}${image}`}
               alt="dog pictures"
               width="500"
               height="500"
@@ -255,7 +257,7 @@ export const SkeletonTwo = () => {
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-gray-300 dark:border-gray-300 border border-gray-300 flex-shrink-0 overflow-hidden"
           >
             <Image
-              src={image}
+              src={`${prefix}${image}`}
               alt="dog pictures"
               width="500"
               height="500"
@@ -275,7 +277,7 @@ export const SkeletonFour = () => {
       <div className="md:absolute left-[14rem] bottom-32 text-center">
         <p>Nara, Japan</p>
         <Image
-          src="/naraPark.jpg"
+          src={`${prefix}/naraPark.jpg`}
           height="150"
           width="150"
           alt=""
@@ -285,7 +287,7 @@ export const SkeletonFour = () => {
       <div className="md:absolute left-16 text-center pl-3 md:pl-0">
         <p>Honolulu, O&apos;ahu</p>
         <Image
-          src="/hawaii.jpg"
+          src={`${prefix}/hawaii.jpg`}
           height="150"
           width="150"
           alt=""
