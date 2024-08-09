@@ -21,7 +21,7 @@ const Hero = () => {
               <div className='md:flex items-center'>
                 <div className='basis-1/3 flex justify-center'>
                   <Image 
-                    src={`/${prefix}/profile.png`}
+                    src={`${prefix}/profile.png`}
                     alt='a selfie of me'
                     width={300}
                     height={300}
