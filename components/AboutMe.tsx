@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import AnimatedComponent from "./AnimatedComponent";
+import { AboutMeCardStack } from "./AboutMeCardStack";
 
 export function AboutMe() {
   const features = [
@@ -20,42 +21,41 @@ export function AboutMe() {
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-gray-300",
     },
     {
-      title: "The Pups",
+      title: "The Pups.",
       description:
-        "Toby is the brown Red Tri Australian Shepherd, Latte is the golden Cocker Spaniel/Poodle mix, and Bailey is the black Maltese/Yorkshire Terrier.",
+        "Toby is the Red Tri Australian Shepherd, Latte is the golden Cocker Spaniel/Poodle mix, and Bailey is the black Maltese/Yorkshire Terrier.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-gray-300",
     },
     {
       title: "Free time.",
       description:
-        "I enjoy playing online games and listening to music.",
+        "When I’m not coding or working on projects, you’ll find me playing video games with friends on Discord or listening to music on Spotify. Gaming helps me unwind and connect with others, while music is my go-to for setting the mood.",
       skeleton: <SkeletonThree />,
       className:
-        "col-span-1 lg:col-span-3 lg:border-r dark:border-gray-300",
+        "col-span-1 lg:col-span-3 border-b lg:border-r dark:border-gray-300",
     },
     {
-      title: "Deploy in seconds",
+      title: "Of course, coding.",
       description:
-        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
+        "I, like many others, have a love-hate, rollercoaster-like relationship with coding. From spending hours on a seemingly simple problem only to solve it in minutes after taking a break, to experiencing the joy of seeing your code work without knowing exactly how you did it—coding is a journey of highs and lows. In the end, I genuinely enjoy the challenge of solving problems and the satisfaction of seeing the final product come together.",
       skeleton: <SkeletonOne />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none border-gray-300",
     },
   ];
   return (
-    <div className="bg-customSecondaryBG py-[7rem]">
+    <div className="bg-customSecondaryBG py-[4rem] md:py-[7rem]">
       <AnimatedComponent>
         <div className="relative z-20 mx-auto w-[87.5vw] max-w-screen-[1680px]">
-          <h2 className="text-[56px] leading-[1.07] tracking-[-.005em]">
+          <h2 className="text-[28px] leading-[1.14] tracking-[.007em] md:text-[56px] md:leading-[1.07] md:tracking-[-.005em]">
             Get to know Me.
           </h2>
-
           <div className="relative">
-            <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-border-gray-300">
+            <div className="grid grid-cols-1 lg:grid-cols-6 mt-6 md:mt-12 xl:border rounded-md dark:border-border-gray-300">
               {features.map((feature) => (
                 <FeatureCard key={feature.title} className={feature.className}>
-                  <FeatureTitle>{feature.title}</FeatureTitle>
-                  <FeatureDescription>{feature.description}</FeatureDescription>
+                    <FeatureTitle>{feature.title}</FeatureTitle>
+                    <FeatureDescription>{feature.description}</FeatureDescription>
                   <div className=" h-full w-full">{feature.skeleton}</div>
                 </FeatureCard>
               ))}
@@ -75,7 +75,7 @@ const FeatureCard = ({
   className?: string;
 }) => {
   return (
-    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+    <div className={cn(`px-4 py-6 sm:p-8 relative overflow-hidden`, className)}>
       {children}
     </div>
   );
@@ -83,7 +83,7 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <p className="text-[28px] leading-[1.14] tracking-[.007em]">
+    <p className="text-[21px] leading-[1.19] tracking-[.011em] md:text-[28px] md:leading-[1.14] md:tracking-[.007em]">
       {children}
     </p>
   );
@@ -93,7 +93,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
     <p
       className={cn(
-        "text-[17px] leading-[1.47] tracking-[.022em] text-left mx-auto",
+        "text-[14px] leading-[1.43] tracking-[-.016em] md:text-[17px] md:leading-[1.47] md:tracking-[.022em] text-left mx-auto",
         "text-center",
         "text-left max-w-sm mx-0 md:text-sm my-2"
       )}
@@ -105,42 +105,73 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 
 export const SkeletonOne = () => {
   return (
-    <div className="flex py-8 px-2 gap-10">
-      <div className="">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
-          {/* TODO */}
-          <Image
-            src="/linear.webp"
-            alt="header"
-            width={800}
-            height={800}
-            className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
-          />
-        </div>
-      </div>
-    </div>
+    <AboutMeCardStack />
   );
 };
 
 export const SkeletonThree = () => {
   return (
-    <Link
-      href=""
-      target="__blank"
-      className="relative flex gap-10"
-    >
-      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
+      <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-full">
         <div className="flex flex-1 flex-col space-y-2  relative">
-          {/* TODO */}
-          <Image
-            src=""
-            alt="header"
-            width={800}
-            height={800}
-          />
+          <p className="pt-[1.5rem] text-[14px] leading-[1.47] tracking-[.022em]">
+            Here are a few of the Apps I use
+          </p>
+          <div className="py-[1.5rem] grid grid-cols-2 gap-4">
+          <Link
+            href="https://www.riotgames.com/en"
+            target="_blank"
+            className="flex justify-center items-center"
+          >
+            <Image
+              src="/riotgames.svg"
+              alt="riot games logo"
+              width={150}
+              height={150}
+              className="max-w-full h-auto"
+            />
+          </Link>
+          <Link
+            href="https://www.nintendo.com/us/"
+            target="_blank"
+            className="flex justify-center items-center"
+          >
+            <Image
+              src="/nintendo.svg"
+              alt="nintendo logo"
+              width={150}
+              height={150}
+              className="max-w-full h-auto"
+            />
+          </Link>
+          <Link
+            href="https://open.spotify.com/"
+            target="_blank"
+            className="flex justify-center items-center"
+          >
+            <Image
+              src="/spotify.svg"
+              alt="spotify logo"
+              width={150}
+              height={150}
+              className="max-w-full h-auto"
+            />
+          </Link>
+          <Link
+            href="https://discord.com/"
+            target="_blank"
+            className="flex justify-center items-center"
+          >
+            <Image
+              src="/discord.svg"
+              alt="discord logo"
+              width={150}
+              height={150}
+              className="max-w-full h-auto"
+            />
+          </Link>
+          </div>
         </div>
       </div>
-    </Link>
   );
 };
 
@@ -161,19 +192,24 @@ export const SkeletonTwo = () => {
 
   const imageVariants = {
     whileHover: {
-      scale: 1.1,
+      scale: 1.5,
       rotate: 0,
-      zIndex: 100,
+      zIndex: 99,
     },
     whileTap: {
-      scale: 1.1,
+      scale: 2.95,
       rotate: 0,
       zIndex: 100,
+      position: "absolute",
+      left: "50%",
+      top: "40%",
+      translateX: "-50%",
+      translateY: "-50%",
     },
   };
   return (
-    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      {/* TODO */}
+    <div className="relative flex flex-col items-start px-8 py-4 md:p-8 gap-10 h-full overflow-hidden">
+      <p className="text-[12px] leading-[1.33] tracking-[.022em] mx-auto md:ml-0'">Click And Hold To Enlarge Images.</p>
       <div className="flex flex-row -ml-7 md:-ml-20">
         {images.map((image, idx) => (
           <motion.div
@@ -224,9 +260,9 @@ export const SkeletonTwo = () => {
 
 export const SkeletonFour = () => {
   return (
-    <div>
-      <div className="absolute left-[14rem] bottom-32 text-center">
-        <p>Japan</p>
+    <div className="flex md:block mb-[-3.25rem] md:mb-0 justify-between">
+      <div className="md:absolute left-[14rem] bottom-32 text-center">
+        <p>Nara, Japan</p>
         <Image
           src="/naraPark.jpg"
           height="150"
@@ -235,8 +271,8 @@ export const SkeletonFour = () => {
           className="rounded-xl border-2 border-black"
         />
       </div>
-      <div className="absolute left-16 text-center">
-        <p>Hawaii</p>
+      <div className="md:absolute left-16 text-center pl-3 md:pl-0">
+        <p>Honolulu, O&apos;ahu</p>
         <Image
           src="/hawaii.jpg"
           height="150"
@@ -245,8 +281,8 @@ export const SkeletonFour = () => {
           className="rounded-xl border-2 border-black"
         />
       </div>
-      <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-        <Globe className="absolute -right-10 md:-right-10 -bottom-[13rem]" />
+      <div className="h-60 md:h-60 flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
+        <Globe className="absolute lg:right-0 -bottom-[10.5rem] lg:-bottom-[8rem] hidden md:block" />
       </div>
     </div>
   );
@@ -262,8 +298,8 @@ export const Globe = ({ className }: { className?: string }) => {
  
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
-      width: 600 * 2,
-      height: 600 * 2,
+      width: 400 * 2,
+      height: 400 * 2,
       phi: 0,
       theta: 0,
       dark: 1,
@@ -303,7 +339,7 @@ export const Globe = ({ className }: { className?: string }) => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+      style={{ width: 400, height: 400, maxWidth: "100%", aspectRatio: 1 }}
       className={className}
     />
   );

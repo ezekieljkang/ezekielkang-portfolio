@@ -19,6 +19,8 @@ const config: Config = {
         customBG: 'rgb(255,255,255)',
         customSecondary: 'rgb(110,110,115)',
         customSecondaryBG: '#fafafa',
+        customBlue: 'rgb(0, 113, 227)',
+        customGray: '#86868b',
       },
       fontFamily: {
         sfProDisplay: ['SF Pro Display', 'sans-serif']

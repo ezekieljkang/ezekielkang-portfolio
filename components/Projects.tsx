@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import AnimatedComponent from "./AnimatedComponent";
 import { LinkPreview } from "@/components/ui/link-preview";
-import Modal from "./modal";
 
 export function Projects() {
   const cards = data.map((card, index) => (
@@ -12,9 +11,9 @@ export function Projects() {
   ));
 
   return (
-    <div className="mx-auto w-[87.5vw] max-w-screen-[1680px] py-20">
+    <div className="mx-auto w-[87.5vw] max-w-screen-[1680px] pt-20 pb-10 md:py-20">
       <AnimatedComponent>
-        <h2 className='text-[56px] leading-[1.07] tracking-[-.005em]'>
+        <h2 className='text-[28px] leading-[1.14] tracking-[.007em] md:text-[56px] md:leading-[1.07] md:tracking-[-.005em]'>
           Explore my Work.
         </h2>
         <Carousel items={cards} />
@@ -62,9 +61,9 @@ const PortfolioContent = () => {
           <Image
             src="/portfoliotemplate.png"
             alt="giphy images with search option"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -109,9 +108,9 @@ const UsedCarsProject = () => {
           <Image
             src="/carmostdata.png"
             alt="giphy images with search option"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -156,9 +155,9 @@ const LibraryProject = () => {
           <Image
             src="/libraryhome.png"
             alt="giphy images with search option"
-            height="1800"
+            height="1500"
             width="1000"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -166,26 +165,28 @@ const LibraryProject = () => {
         className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
       >
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto mt-4">
-        Create Book Page
-      </p>
+          Create Book Page
+        </p>
         <Image
-            src="/libraryhome1.png"
+            src="/librarycreatebook.png"
             alt="giphy images with search option"
-            height="3000"
-            width="1850"
-            layout="responsive"
-            className="md:w-4/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1850"
+            width="1000"
+            className="md:w-[90%] md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
       </div>
       <div
         className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
       >
+        <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto mt-4">
+          Book Instance Page
+        </p>
         <Image
-            src="/libraryhome1.png"
+            src="/libraryinstance.png"
             alt="giphy images with search option"
-            height="2500"
-            width="2500"
-            className="h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-[90%] md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
       </div>
     </>
@@ -232,9 +233,9 @@ const GeminiProject = () => {
           <Image
             src="/geminiclone.png"
             alt="giphy images with search option"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -279,9 +280,9 @@ const TShirtProject = () => {
           <Image
             src="/tshirtmaker.png"
             alt="giphy images with search option"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -328,9 +329,9 @@ const GiphyProject = () => {
           <Image
             src="/giphypage.png"
             alt="giphy images with search option"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -374,9 +375,9 @@ const LandingPageProject = () => {
           <Image
             src="/evpage.png"
             alt="giphy images with search option"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
+            height="1500"
+            width="1000"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain rounded-xl mt-[1.5rem]"
           />
         </a>
       </div>
@@ -398,7 +399,7 @@ const data = [
     content: <UsedCarsProject />,
   },
   {
-    category: "Backend Projects-WORK ON",
+    category: "Backend Projects",
     title: "A local library management system with CRUD functionality.",
     src: "/locallibrary.png",
     content: <LibraryProject />,
