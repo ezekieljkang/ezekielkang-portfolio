@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/ezekielkang-portfolio",
+  assetPrefix: "/ezekielkang-portfolio",
   reactStrictMode: true,
   images: {
     domains: ["api.microlink.io"],

@@ -23,6 +23,8 @@ export function Projects() {
 }
 
 const PortfolioContent = () => {
+  const prefix = '/ezekielkang-portfolio';
+
   return (
     <>
       <div
@@ -72,6 +74,8 @@ const PortfolioContent = () => {
 };
 
 const UsedCarsProject = () => {
+  const prefix = '/ezekielkang-portfolio';
+
   return (
     <>
       <div
@@ -119,6 +123,8 @@ const UsedCarsProject = () => {
 };
 
 const LibraryProject = () => {
+  const prefix = '/ezekielkang-portfolio';
+
   return (
     <>
       <div
@@ -194,6 +200,8 @@ const LibraryProject = () => {
 }
 
 const GeminiProject = () => {
+  const prefix = '/ezekielkang-portfolio';
+
   return (
     <>
       <div

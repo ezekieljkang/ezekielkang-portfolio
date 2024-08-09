@@ -5,6 +5,7 @@ import Image from 'next/image';
 const MySkills = () => {
   const { iconList } = presentSkills[0];
   const { iconList2 } = futureSkills[0];
+  const prefix = '/ezekielkang-portfolio';
 
   return (
     <div className='flex text-center items-center py-6 space-x-4'>

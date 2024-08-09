@@ -8,6 +8,8 @@ import HeroAnimatedContainer from './HeroAnimatedContainer'; // Import the HeroA
 import MySkills from './MySkills';
 
 const Hero = () => {
+  const prefix = '/ezekielkang-portfolio';
+
   return (
     <div className='pt-[1.5rem]'>
       <NavBar />
@@ -23,7 +25,7 @@ const Hero = () => {
                     alt='a selfie of me'
                     width={300}
                     height={300}
-                    className='rounded-full md:object-cover w-[225px] h-[225px] md:w-[300px] md:h-[300px]'
+                    className='rounded-full md:object-cover w-[200px] h-[200px] md:w-[300px] md:h-[300px]'
                   />
                 </div>
                 <div className='basis-2/3 flex flex-col justify-center'>
