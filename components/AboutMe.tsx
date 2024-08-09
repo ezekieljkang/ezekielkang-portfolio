@@ -257,7 +257,7 @@ export const SkeletonTwo = () => {
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-gray-300 dark:border-gray-300 border border-gray-300 flex-shrink-0 overflow-hidden"
           >
             <Image
-              src={`${prefix}${image}`}
+              src={image}
               alt="dog pictures"
               width="500"
               height="500"
