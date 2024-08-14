@@ -34,7 +34,7 @@ const Hero = () => {
                   </div>
                   <div className='text-customBG text-center md:text-left text-[21px] leading-[1.19] tracking-[.011em] md:leading-[1.14] md:text-[28px] md:tracking-[.007em]'>
                     <p className='pt-2 md:pt-0'>
-                      I&apos;m a full-stack developer from Southern California, skilled in React, Tailwind, Node.js, and more, and continually looking to expand my skillset. I&apos;m passionate about creating simple, modern, and accessible web applications.
+                      I&apos;m a Front End developer from Southern California, skilled in React, Tailwind, Node.js, and more, and continually looking to expand my skillset. I&apos;m passionate about creating simple, modern, and accessible web applications.
                     </p>
                     <div className='hidden md:block'>
                       <MySkills />
