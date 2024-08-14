@@ -12,17 +12,17 @@ body {
 @font-face {
   font-family: 'SF Pro Display';
   font-weight: 400; /* Regular */
-  src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  src: url('/ezekielkang-portfolio/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
 }
 
 @font-face {
   font-family: 'SF Pro Display';
   font-weight: 500; /* Medium */
-  src: url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  src: url('/ezekielkang-portfolio/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
 }
 
 @font-face {
   font-family: 'SF Pro Display';
   font-weight: 700; /* Bold */
-  src: url('/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+  src: url('/ezekielkang-portfolio/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
 }
